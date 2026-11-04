@@ -9,7 +9,7 @@
 
 <p align="center">
   <a href="https://heurion.org"><img src="https://img.shields.io/badge/Website-heurion.org-00FF93?style=flat-square&labelColor=06110D" alt="Website" /></a>
-  <a href="https://heurion.org/blog/"><img src="https://img.shields.io/badge/Technical_Blog-heurion.org%2Fblog-00C472?style=flat-square&labelColor=06110D" alt="Technical Blog" /></a>
+  <a href="https://heurion.org/blog"><img src="https://img.shields.io/badge/Technical_Blog-heurion.org%2Fblog-00C472?style=flat-square&labelColor=06110D" alt="Technical Blog" /></a>
   <a href="https://heurion.org/app"><img src="https://img.shields.io/badge/Workstation-Launch%20App-06B680?style=flat-square&labelColor=06110D" alt="Launch Workstation" /></a>
   <a href="https://modelcontextprotocol.io/"><img src="https://img.shields.io/badge/Protocols-MCP%20%7C%20Google%20A2A%20%7C%20AAP--1.0-3B82F6?style=flat-square&labelColor=06110D" alt="Protocols" /></a>
   <a href="https://github.com/heurion-org/heurion"><img src="https://img.shields.io/badge/Stack-TypeScript%20%7C%20Rust%20%7C%20Python-F8FAFC?style=flat-square&labelColor=06110D" alt="Stack" /></a>
@@ -19,7 +19,7 @@
 
 <p align="center">
   <a href="https://heurion.org"><b>Official Website</b></a> •
-  <a href="https://heurion.org/blog/"><b>Technical Blog</b></a> •
+  <a href="https://heurion.org/blog"><b>Technical Blog</b></a> •
   <a href="https://heurion.org/app"><b>Clinical Workstation</b></a> •
   <a href="#flagship-repositories"><b>Repositories</b></a> •
   <a href="#research--empirical-benchmarks"><b>Research & Monographs</b></a> •
@@ -52,7 +52,7 @@ Our open-source ecosystem spans two tightly integrated layers connected via the 
 
 | Repository | Layer & Scope | Key Technical Highlights | Stack & Protocols |
 | :--- | :--- | :--- | :--- |
-| [**`heurion-org/heurion`**](https://github.com/heurion-org/heurion)<br/><sub><b>Heurion 2.0 & OmniCanvas</b> · <a href="https://heurion.org">heurion.org</a> · <a href="https://heurion.org/blog/">heurion.org/blog</a></sub> | **Clinical AI Workstation & Collaborative Studio**<br/><sub>Application & Domain Layer</sub> | • **Dual-Surface CRDT Core**: ProseMirror + Yjs with stable `{#id}` addressing, `0.128ms` per-turn selective AI rollback, and byte-preserving `.docx`/`.pptx` slice export<br/>• **Citation-Grounded Loop**: Pre-write bare DOI/PMID block + 4-way PubMed / Europe PMC / OpenAlex claim verification<br/>• **Clinical & PHI Suite**: 2-stage PHI funnel (`98.6%` recall), de-identified cohorts (`P001`), native Word Table 1, KM/Cox, CONSORT, E-value & MONAI 3D<br/>• **OmniCanvas (`@heurion2/canvas-service`)**: Standalone Docs & 16:9 Slides studio with 30 pure Canvas MCP tools & `@resvg/resvg-js` 4K rasterizer | `TypeScript` `Node.js 24` `ProseMirror` `Yjs` `Python 3.11` `Rust/WASM` `MCP` `AAP-1.0` |
+| [**`heurion-org/heurion`**](https://github.com/heurion-org/heurion)<br/><sub><b>Heurion 2.0 & OmniCanvas</b> · <a href="https://heurion.org">heurion.org</a> · <a href="https://heurion.org/blog">heurion.org/blog</a></sub> | **Clinical AI Workstation & Collaborative Studio**<br/><sub>Application & Domain Layer</sub> | • **Dual-Surface CRDT Core**: ProseMirror + Yjs with stable `{#id}` addressing, `0.128ms` per-turn selective AI rollback, and byte-preserving `.docx`/`.pptx` slice export<br/>• **Citation-Grounded Loop**: Pre-write bare DOI/PMID block + 4-way PubMed / Europe PMC / OpenAlex claim verification<br/>• **Clinical & PHI Suite**: 2-stage PHI funnel (`98.6%` recall), de-identified cohorts (`P001`), native Word Table 1, KM/Cox, CONSORT, E-value & MONAI 3D<br/>• **OmniCanvas (`@heurion2/canvas-service`)**: Standalone Docs & 16:9 Slides studio with 30 pure Canvas MCP tools & `@resvg/resvg-js` 4K rasterizer | `TypeScript` `Node.js 24` `ProseMirror` `Yjs` `Python 3.11` `Rust/WASM` `MCP` `AAP-1.0` |
 | [**`heurion-org/aegis-os`**](https://github.com/heurion-org/aegis-os)<br/><sub><b>Aegis OS Runtime & Cloud PaaS</b></sub> | **Transactional Agent OS Kernel**<br/><sub>Infrastructure & Security Layer</sub> | • **Transactional CoW VFS (`aos-vfs`)**: `0.42ms` per-file / `6.3ms` repo APFS `clonefile` & `15.6ms` Linux `FICLONE` shadow workspaces with 4-Tier LCS Diff3 auto-merge & `verify_cmd` gate<br/>• **Dual-Tier Kernel Sandbox (`aos-sandbox`)**: macOS Seatbelt & Linux Bubblewrap with default-deny `$HOME` credential isolation (`0.0%` ASR across 80 attacks)<br/>• **Zero-Trust Egress (`aos-egress`)**: Identity-pinned proxy with L7 method/path `$AOS_SECRET_*` injection & outbound DLP inspection<br/>• **A2A Bus & 5-Stage Policy (`aos-ipc`, `aos-policy`)**: 35 MCP tools, CAS artifact bus (`-99.85%` IPC tokens), and `-90.7%` to `-97.9%` prompt reduction | `Rust` `APFS/Btrfs CoW` `Seatbelt` `Bubblewrap` `Ed25519` `MCP` `Google A2A` `AAP-1.0` |
 
 ---
@@ -100,13 +100,13 @@ Heurion's architecture is grounded in reproducible systems and clinical informat
    *Hui Zhao (Heurion Research, Rotterdam, Netherlands)* · `cs.OS` / `cs.CR` / `cs.AI` / `cs.SE`  
    [**Read Paper PDF (`aegis_os_arxiv_preprint.pdf`)**](https://github.com/heurion-org/aegis-os/blob/main/paper/aegis_os_arxiv_preprint.pdf) · [**LaTeX Source (`main.tex`)**](https://github.com/heurion-org/aegis-os/blob/main/paper/main.tex) · [**Benchmark Report (`BENCHMARK_REPORT.md`)**](https://github.com/heurion-org/aegis-os/blob/main/BENCHMARK_REPORT.md)
 
-### <img src="./icons/book.svg" width="16" height="16" valign="middle" /> Technical Blog & Systems Monographs ([`heurion.org/blog`](https://heurion.org/blog/))
+### <img src="./icons/book.svg" width="16" height="16" valign="middle" /> Technical Blog & Systems Monographs ([`heurion.org/blog`](https://heurion.org/blog) · [English](https://heurion.org/en/blog))
 
 | # | Monograph | Focus & Key Metrics | Links |
 | :--- | :--- | :--- | :--- |
-| **01** | **Why Free-Form Shell Agents Fail at Research Manuscripts: Dual-Surface CRDT & Byte-Preserving OOXML Patch Architecture**<br/><sub>*为什么自由 Shell 智能体在科研论文写作中会失效：双表面 CRDT 与字节级 OOXML 补丁架构*</sub> | Dual-Surface `ProseMirror + Yjs` CRDT (`{#id}` blocks), `100%` binary slice identity + Run-level LCS `patchParagraph` (**`96.4%`** vs. `21.4%` formatting retention), and **`0.128ms`** selective per-turn rollback | [**English**](https://heurion.org/blog/en/dual-surface-crdt-clinical-ai) · [**中文**](https://heurion.org/blog/dual-surface-crdt-clinical-ai) |
-| **02** | **Why Software Must Be Rebuilt with AI-Native Interfaces: Human-Agent Capability Parity as New Infrastructure**<br/><sub>*为什么软件必须为 AI Agent 重建原生接口：人机同权（Capability Parity）与新基础设施*</sub> | `Agent Capability = User Capability` & `Agent Permission = User Permission`, zero-fork `256-bit` loopback kernel, `403` anti-self-approval Confirmation Cards, end-to-end auditable permission requests, and `64+` CI route-to-tool reflection invariants | [**English**](https://heurion.org/blog/en/human-agent-capability-parity-ai-native-software) · [**中文**](https://heurion.org/blog/human-agent-capability-parity-ai-native-software) |
-| **03** | **Beyond Git Feature Branches: Shadow Workspaces, Advisory File Claims, and Transactional Auto-Merge for Human-Agent Collaboration**<br/><sub>*超越 Git 分支：面向人机与多智能体协作的影子工作区、文件锁与事务归并范式*</sub> | Trunk-anchored **`0.42ms`** CoW shadow workspaces, proactive TTL file claims (`coord_claim`), piggybacked `_aegis_inbox` IPC, **`98.7%`** 4-tier LCS Diff3 auto-merge, and hash-chained permission escalation audit ledgers (**`-90.7%` to `-97.9%`** prompts) | [**English**](https://heurion.org/blog/en/aegis-os-transactional-agent-kernel) · [**中文**](https://heurion.org/blog/aegis-os-transactional-agent-kernel) |
+| **01** | **Why Free-Form Shell Agents Fail at Research Manuscripts: Dual-Surface CRDT & Byte-Preserving OOXML Patch Architecture**<br/><sub>*为什么自由 Shell 智能体在科研论文写作中会失效：双表面 CRDT 与字节级 OOXML 补丁架构*</sub> | Dual-Surface `ProseMirror + Yjs` CRDT (`{#id}` blocks), `100%` binary slice identity + Run-level LCS `patchParagraph` (**`96.4%`** vs. `21.4%` formatting retention), and **`0.128ms`** selective per-turn rollback | [**English**](https://heurion.org/en/blog/dual-surface-crdt-clinical-ai) · [**中文**](https://heurion.org/blog/dual-surface-crdt-clinical-ai) |
+| **02** | **Why Software Must Be Rebuilt with AI-Native Interfaces: Human-Agent Capability Parity as New Infrastructure**<br/><sub>*为什么软件必须为 AI Agent 重建原生接口：人机同权（Capability Parity）与新基础设施*</sub> | `Agent Capability = User Capability` & `Agent Permission = User Permission`, zero-fork `256-bit` loopback kernel, `403` anti-self-approval Confirmation Cards, end-to-end auditable permission requests, and `64+` CI route-to-tool reflection invariants | [**English**](https://heurion.org/en/blog/human-agent-capability-parity-ai-native-software) · [**中文**](https://heurion.org/blog/human-agent-capability-parity-ai-native-software) |
+| **03** | **Beyond Git Feature Branches: Shadow Workspaces, Advisory File Claims, and Transactional Auto-Merge for Human-Agent Collaboration**<br/><sub>*超越 Git 分支：面向人机与多智能体协作的影子工作区、文件锁与事务归并范式*</sub> | Trunk-anchored **`0.42ms`** CoW shadow workspaces, proactive TTL file claims (`coord_claim`), piggybacked `_aegis_inbox` IPC, **`98.7%`** 4-tier LCS Diff3 auto-merge, and hash-chained permission escalation audit ledgers (**`-90.7%` to `-97.9%`** prompts) | [**English**](https://heurion.org/en/blog/aegis-os-transactional-agent-kernel) · [**中文**](https://heurion.org/blog/aegis-os-transactional-agent-kernel) |
 
 ### <img src="./icons/chart.svg" width="16" height="16" valign="middle" /> Headline Empirical Results
 
@@ -130,7 +130,7 @@ In addition to self-hosted Docker and local MCP deployments, Heurion provides in
 | Application / Utility | Endpoint | Capabilities & Deliverables |
 | :--- | :--- | :--- |
 | **Heurion 2.0 Clinical Workstation** | [**`heurion.org/app`**](https://heurion.org/app) | Full workspace for cohort querying, sandboxed Python/R biostatistics, MONAI 3D medical imaging, and dual-mode Docs & Slides co-authoring |
-| **Heurion Research Technical Blog** | [**`heurion.org/blog`**](https://heurion.org/blog/) | Bilingual architectural monographs on Dual-Surface CRDTs, Human-Agent Capability Parity, and Transactional Agent Kernels |
+| **Heurion Research Technical Blog** | [**`heurion.org/blog`**](https://heurion.org/blog) | Bilingual architectural monographs on Dual-Surface CRDTs, Human-Agent Capability Parity, and Transactional Agent Kernels |
 | **Patient Health Record (PHR) Portal** | [**`heurion.org/phr`**](https://heurion.org/phr) | Multi-modal outpatient/inpatient lab OCR, longitudinal patient timeline archiving, and claim-authorized clinician sharing |
 | **Publication-Grade Table 1 Generator** | [**`heurion.org/tools/table-1-generator`**](https://heurion.org/tools/table-1-generator) | Instant client-side PHI scan, automatic group $P$-values & Standardized Mean Differences (SMD), and native ICMJE/NEJM Word (`.docx`) 3-line table export |
 | **VanderWeele E-Value Calculator** | [**`heurion.org/tools/e-value-calculator`**](https://heurion.org/tools/e-value-calculator) | Unmeasured confounding sensitivity analysis for `HR` / `OR` / `RR` with interactive threshold curves and bilingual SCI manuscript/rebuttal statements |
@@ -167,7 +167,7 @@ cd aegis-os && cargo build --release
   - **沙箱生物统计与三层自演进记忆**：内置发表级原生 Word Table 1 三线表、Kaplan-Meier 生存分析、CONSORT/STROBE 流程图、VanderWeele E-value 与 MONAI 3D 影像量化；独创声明式与程序性正交的三层自演进记忆系统，将跨会话护栏拒绝率降低 **49%**。
 - **事务型多租户智能体操作系统 ([`heurion-org/aegis-os`](https://github.com/heurion-org/aegis-os))**：
   - 为 Google Antigravity (`agy`)、Claude Code (`claude`)、Codex 等智能体提供毫秒级写时复制影子工作区（macOS APFS `clonefile` 单文件 `0.42ms` / 整仓 `6.3ms`，Linux Btrfs `FICLONE` `15.6ms`）、双层内核沙箱（Seatbelt / Bubblewrap）、L7 边界密钥注入与 DLP 防泄漏、Google A2A 协同总线、全链路可审计权限升级账本以及 `AAP-1.0` Ed25519 加密租约验签，在 **28,087** 次真实智能体调用中消除 **90.7%–97.9%** 的人工确认弹窗，并在 80 项端到端对抗攻击测试中实现 **0.0%** 攻击成功率。
-- **系统架构深度技术博客 ([`heurion.org/blog`](https://heurion.org/blog/))**：
+- **系统架构深度技术博客 ([`heurion.org/blog`](https://heurion.org/blog))**：
   - 已发布《双表面 CRDT 与字节级 OOXML 补丁架构》、《人机同权（Capability Parity）与新基础设施》、《面向人机与多智能体协作的影子工作区、文件锁与事务归并范式》三篇中英双语系统专论。
 
 ---
@@ -176,7 +176,7 @@ cd aegis-os && cargo build --release
 
 <img src="./icons/shield.svg" width="16" height="16" valign="middle" /> <b>Security, Privacy & Clinical Disclaimer</b><br/>
 <sub>Heurion enforces tenant-isolated storage, two-stage PHI de-identification, and cryptographic lease-gated governance.<br/>All clinical research outputs and statistical analyses are designed strictly for academic research and decision support—non-diagnostic platform.</sub><br/><br/>
-<sub><b><a href="https://heurion.org">heurion.org</a></b> · <b><a href="https://heurion.org/blog/">heurion.org/blog</a></b> · Contact: <a href="mailto:contact@heurion.org">contact@heurion.org</a> · Research Inquiries: <a href="mailto:huizhao@heurion.org">huizhao@heurion.org</a></sub><br/>
+<sub><b><a href="https://heurion.org">heurion.org</a></b> · <b><a href="https://heurion.org/blog">heurion.org/blog</a></b> · Contact: <a href="mailto:contact@heurion.org">contact@heurion.org</a> · Research Inquiries: <a href="mailto:huizhao@heurion.org">huizhao@heurion.org</a></sub><br/>
 <sub>© 2026 Heurion Organization. Open-source repositories licensed under the <a href="https://github.com/heurion-org/heurion/blob/main/LICENSE">MIT License</a>.</sub>
 
 </div>
